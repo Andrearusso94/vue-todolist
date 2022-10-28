@@ -24,13 +24,13 @@
       <main>
       <div id="app">
        <div class="container my-5">
-        <div class="addTask">
+        <div class="addTask ">
             <h3>Add a new task</h3>
             <input type="text" v-model="newTask" @keyup.enter="addTask">
             <button @click="addTask">Add Task</button>
 
 
-        <ul v-if="tasks.length !== 0" >
+        <ul class="my-5" v-if="tasks.length !== 0" >
             <li v-for="(inner, index) in tasks" :class="inner.error ? 'decoration': '' " @click="error(index)" >{{inner.task}} <span @click="isDone(index)" class="mx-4 cancel">X</span></li>
         </ul>
        </div>
