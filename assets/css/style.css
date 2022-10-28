@@ -11,3 +11,11 @@ body{
 .decoration{
     text-decoration: line-through;
 }
+
+.cancel{
+    color: azure;
+    background-color: blue;
+    border: 2px solid blue;
+    border-radius: 45%;
+    padding: 0.25rem;
+}

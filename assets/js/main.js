@@ -56,6 +56,10 @@ createApp({
                 this.tasks[index].error = false;
             }
         },
+        isDone(index){
+            console.log('ho cliccato sulla task', index);
+            this.tasks.splice(index, 1)
+        }
     }
 
 
