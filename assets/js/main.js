@@ -13,7 +13,8 @@ Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo vie
 
 
 --MILESTONE 3
-Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
+Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, 
+che quindi viene aggiunto alla lista dei todo esistenti.
 
 
 --Bonus:
@@ -30,6 +31,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newTask: '',
             tasks: [
                 {
                     task: 'learn html',
@@ -48,19 +50,35 @@ createApp({
         }
 
     },
- methods: {
+    methods: {
+
+
         done: (index) => {
-            if(this.tasks[index].error === false){
+            if (this.tasks[index].error === false) {
                 this.tasks[index].error = true
-            } else if(this.tasks[index].error === true){
+            } else if (this.tasks[index].error === true) {
                 this.tasks[index].error = false;
             }
         },
-        isDone(index){
+
+        addTask() {
+            console.log('ho cliccato su task')
+
+            if (this.newTask) {
+                this.tasks.push({ task: this.newTask, error: false });
+                this.newTask = "";
+            }
+
+        },
+
+        isDone(index) {
             console.log('ho cliccato sulla task', index);
             this.tasks.splice(index, 1)
-        }
+        },
     }
+
+
+
 
 
 }).mount('#app')
