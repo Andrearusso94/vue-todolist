@@ -38,11 +38,11 @@ createApp({
                     error: true,
                 },
                 {
-                    task: 'learn html',
+                    task: 'learn css',
                     error: true,
                 },
                 {
-                    task: 'learn html',
+                    task: 'learn js',
                     error: true,
                 },
             ]
