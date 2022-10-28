@@ -41,7 +41,7 @@ createApp({
                 },
                 {
                     task: 'learn js',
-                    error: false,
+                    error: true,
                 },
             ],
 
