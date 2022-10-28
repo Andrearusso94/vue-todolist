@@ -26,27 +26,37 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 
 
 
-import {
-    createApp
-} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+const { createApp } = Vue
 createApp({
     data() {
         return {
             tasks: [
                 {
                     task: 'learn html',
-                    error: true,
+                    error: false,
                 },
                 {
                     task: 'learn css',
-                    error: true,
+                    error: false,
                 },
                 {
                     task: 'learn js',
-                    error: true,
+                    error: false,
                 },
-            ]
+            ],
 
         }
+
+    },
+ methods: {
+        done: (index) => {
+            if(this.tasks[index].error === false){
+                this.tasks[index].error = true
+            } else if(this.tasks[index].error === true){
+                this.tasks[index].error = false;
+            }
+        },
     }
+
+
 }).mount('#app')

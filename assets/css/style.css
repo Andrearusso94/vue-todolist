@@ -7,3 +7,7 @@
 body{
     background-color: cornflowerblue;
 }
+
+.decoration{
+    text-decoration: line-through;
+}

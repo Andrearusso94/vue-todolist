@@ -7,6 +7,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="/assets/css/style.css">
     
       <!-- Bootstrap CSS v5.2.1 -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -23,8 +24,8 @@
       <main>
       <div id="app">
        <div class="container my-5">
-        <ul>
-            <li v-for="tasks in tasks">{{tasks.task}}</li>
+        <ul v-for="(inner, index) in tasks">
+            <li :class="inner.error ? 'decoration': '' " @click="error(index)" >{{inner.task}}</li>
         </ul>
        </div>
 
@@ -42,8 +43,9 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
       </script>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js"></script>
 
-<script src="./assets/js/main.js" type="module"></script>
+<script src="./assets/js/main.js"></script>
     </body>
     
     </html>
