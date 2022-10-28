@@ -33,11 +33,11 @@ createApp({
             tasks: [
                 {
                     task: 'learn html',
-                    error: false,
+                    error: true,
                 },
                 {
                     task: 'learn css',
-                    error: false,
+                    error: true,
                 },
                 {
                     task: 'learn js',
